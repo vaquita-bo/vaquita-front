@@ -1,24 +1,16 @@
 import { Component, input, output } from '@angular/core';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-primary-button',
-  imports: [],
+  imports: [MatButton],
   template: `
-    <button (click)="click($event)">
+    <button mat-raised-button extended (click)="click($event)">
         {{ label() }}
     </button>
   `,
   styles: `
-  button {
-    background: var(--medium-blue);
-    color: black;
-    padding: 3px;
-    border-radius: 10px;
-    font-size: 1.25em;
-  }
-  button:hover {
-    background: lightgray;
-  }
+  
   `
 })
 export class PrimaryButtonComponent {

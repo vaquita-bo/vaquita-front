@@ -4,14 +4,14 @@ import { PrimaryButtonComponent } from '../../../../shared/components/primary-bu
 
 import { RouterLink } from '@angular/router';
 import { toast } from 'ngx-sonner';
-
-
+import { MatCardModule } from '@angular/material/card'
+import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-product-card',
-  imports: [PrimaryButtonComponent,RouterLink],
+  imports: [RouterLink,MatCardModule,MatButtonModule],
   template: `
     
-        <div class="card" [routerLink]="['/product', product().id]"
+        <mat-card appearance="outlined" [routerLink]="['/product', product().id]"
           [state]="{ justProduct : product()}">
         @if (product().group){
           <!-- TODO replace number of participants by goal-participants -->
@@ -19,18 +19,11 @@ import { toast } from 'ngx-sonner';
               Esperando a {{product().group?.participants }} más
           </span>
         }
-          <img src={{product().image}} />
+          <img mat-card-image src={{product().image}} />
         <div class="details">
             <p class="name">{{product().name}}</p>
             <p class="price">{{product().price}} Bs</p>
         </div>
-        
-       
-            <app-primary-button label="Añadir al carro" 
-              (btnClicked)="click()"
-              [stop]="true"
-            />
-        
         
         <span class="stock" 
              [class]="product().stock ? 'text-green' : 'text-red'"> 
@@ -44,19 +37,14 @@ import { toast } from 'ngx-sonner';
                 3:00:23
             </span>
         }
-        </div>
+        <mat-card-actions align="end">
+          <button mat-button> Comprar </button>
+        </mat-card-actions>
+        </mat-card>
     
     `,
   styles: `
-  .card {
-    background-color: white;
-    min-width: 150px;
-    border-radius: 30px;
-    padding: 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  
   .details {
     display: flex;
     flex-direction: column;
