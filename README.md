@@ -23,3 +23,6 @@ Cada version incluye una descripcion de cambios:
   - lista de features 
   - limites o decisiones 
   - deben ser anotados con SemVer (ej: 1.0.1) 
+
+## configurations
+ver [CONFIG_NOTES](./CONFIG_NOTES.md)
