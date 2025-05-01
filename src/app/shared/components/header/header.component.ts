@@ -5,7 +5,7 @@ import { toast } from 'ngx-sonner';
 
 @Component({
   selector: 'app-header',
-  imports: [PrimaryButtonComponent, RouterLink],
+  imports: [RouterLink],
   template: `
     <div class="header">
       <button class='homebutton' routerLink="/" >VAQUITA</button>
