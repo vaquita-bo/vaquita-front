@@ -1,18 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgxSonnerToaster } from 'ngx-sonner';
-
-
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgxSonnerToaster],
+  imports: [RouterOutlet, NgxSonnerToaster, HeaderComponent],
   template: `
     <ngx-sonner-toaster 
       position="top-center" richColors
@@ -22,7 +15,7 @@ import { NgxSonnerToaster } from 'ngx-sonner';
       duration="5000"
       offset="100px" 
     />
-    <app-header/>
+    <app-header />
     <router-outlet />
   `,
   styles: [],
