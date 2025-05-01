@@ -1,0 +1,32 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { NgxSonnerToaster } from 'ngx-sonner';
+
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, NgxSonnerToaster],
+  template: `
+    <ngx-sonner-toaster 
+      position="top-center" richColors
+      [expand]="true"
+      visibleToasts="3"  
+      closeButton="close"
+      duration="5000"
+      offset="100px" 
+    />
+    <app-header/>
+    <router-outlet />
+  `,
+  styles: [],
+})
+export class AppComponent {
+  title = 'vaquita-front';
+}
