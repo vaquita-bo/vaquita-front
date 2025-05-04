@@ -1,0 +1,26 @@
+.product-list-section{
+    display: flex;
+    justify-content: center;
+    height: 76px;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100% ; /* Aplicar a demas componentes */
+        max-width: 1400px; /* Aplicar a demas componentes */
+        h1{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .filter{
+            cursor: pointer;
+            height: 40px;
+            width: 87px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 1px solid #686868;
+        }
+    }
+}
