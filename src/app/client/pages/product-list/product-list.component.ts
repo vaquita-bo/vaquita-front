@@ -4,10 +4,12 @@ import { ProductCardComponent } from "./product-card/product-card.component";
 import { ProductService } from '../../services/product.service';
 import * as lodash from 'lodash'
 import { Product } from '../../../shared/models/product.model';
+import { BannerComponent } from "../../components/banner/banner.component";
 @Component({
   selector: 'app-product-list',
-  imports: [ProductCardComponent],
+  imports: [ProductCardComponent, BannerComponent],
   template: `
+    <app-banner />
     <h2>Ofertas activas</h2>
     <div class="products-container">
         @for(product of products()['offers']; track product.id) {
