@@ -1,1 +1,17 @@
-<p>navbar-proveedor works!</p>
+<nav class="navbar-proveedor">
+  <div class="navbar-content">
+    <div class="dropdown" (mouseenter)="dropdownAbierto = true"
+         (mouseleave)="dropdownAbierto = false">
+      <button class="dropbtn">
+        Vendedor
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" *ngIf="dropdownAbierto">
+        <a *ngFor="let vista of vistas" (click)="vistaSeleccionada = vista.valor; cambiarVista(); dropdownAbierto = false">
+          {{ vista.texto }}
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
