@@ -1,0 +1,22 @@
+<section id="video"><app-banner />
+<button mat-fab extended (click)="scroll(offer)">
+    Comprar
+</button>
+</section>
+
+<mat-chip-set>
+    <mat-chip>Bebidas</mat-chip>
+    <mat-chip>Abarrotes</mat-chip>
+    <mat-chip>Otros</mat-chip>
+</mat-chip-set>
+<div #offer id="offers" class="products-container">
+    @for(product of products()['offers']; track product.id) {
+        <app-product-card [product]="product" />
+    }
+</div>
+
+<div class="products-container">
+    @for(product of products()['regulars']; track product.id) {
+        <app-product-card [product]="product" />
+    }
+</div>
