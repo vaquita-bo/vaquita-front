@@ -6,18 +6,37 @@
             </div>
             <div class="right">
                 <div class="search-bar">
-                    <input type="text" placeholder="Buscar productos">
-                    <button>
+                    <input type="text" placeholder="Buscar productos" [(ngModel)]="searchTerm">
+                    <button  (click)="onSearchTerm()">
                         <span class="material-symbols-outlined">
                             search
                         </span>
                     </button>
                 </div>
                 <div class="menu">
-                    <button>
-                        Menu
-                        <span class="material-symbols-outlined">
+                    <button class="menu-button">
+                        <div class="title">Menu</div>
+                        <span class="material-symbols-outlined desktop">
                             keyboard_arrow_down
+                        </span>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    pagina 1
+                                </li>
+                                <li>
+                                    pagina 2
+                                </li>
+                                <li>
+                                    pagina 3
+                                </li>
+                                <li>
+                                    pagina 4
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="material-symbols-outlined mobile">
+                            menu
                         </span>
                     </button>
                 </div>
@@ -27,17 +46,8 @@
 
     <section class="categories-section">
         <ul class="categories-list">
-            <li>
-                Todas los productos
-            </li>
-            <li>
-                Bebidas
-            </li>
-            <li>
-                Mascotas
-            </li>
-            <li>
-                Oficina
+            <li *ngFor="let category of categories" (click)="onCategorySelect(category.id)" ngClass="{{category.id === selectedCategoryId ? 'active' : ''}}">
+                {{category.name}}
             </li>
         </ul>
     </section>
