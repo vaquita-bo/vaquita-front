@@ -1,0 +1,11 @@
+<div #offer id="offers" class="products-container">
+    @for(product of products()['offers']; track product.id) {
+        <app-product-card [product]="product" />
+    }
+</div>
+
+<div class="products-container">
+    @for(product of products()['regulars']; track product.id) {
+        <app-product-card [product]="product" />
+    }
+</div>
