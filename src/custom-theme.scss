@@ -26,7 +26,7 @@ mat-card {
   align-items: center;
 }
 mat-card img {
-  
+
     max-width: 290px;
     max-height: 200px;
     overflow: hidden;
@@ -36,4 +36,72 @@ mat-card img {
 
 mat-button {
   box-shadow: 2px 2px  rgb(22, 22, 32);
+}
+
+
+// old styles.css
+
+:root {
+  --medium-blue: #0077ff;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+
+}
+.homebutton {
+  background: none;
+  color: var(--medium-blue);
+  text-shadow: 2px 2px 0 #000;
+
+  border: 0;
+  font-size: 30px;
+}
+.homebutton:hover {
+  color: black;
+  text-shadow: 2px 2px 0 var(--medium-blue);
+}
+.card {
+  background: white;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 5px rgb(22, 22, 32);
+}
+
+.card img {
+  max-width: 290px;
+  max-height: 200px;
+  overflow: hidden;
+  object-fit: contain;
+  border-radius: 20px;
+}
+.details .name {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: auto;
+}
+.details .price {
+  margin: 0;
+  align-self: flex-start;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.text-green {
+  background: rgba(0, 255, 0, 0.7);
+}
+
+.text-red {
+  background: rgba(255,0,0,0.7);
+}
+.text-orange {
+  background:rgba(255, 165, 0, 0.6)
 }
