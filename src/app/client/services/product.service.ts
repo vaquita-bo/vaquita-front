@@ -1,13 +1,85 @@
 import { Injectable } from "@angular/core";
 import { Product } from "../../shared/models/product.model";
-
+import { Group } from '../../shared/models/group.model';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
   })
   export class ProductService {
   
-    constructor() { }
+    // Simulamos una lista de productos estáticos
+    private products: Product[] = [
+      { 
+        id: 1, 
+        name: 'Product 1', 
+        image: 'assets/product1.jpg', 
+        price: 100, 
+        stock: 50, 
+        group: { 
+          id: 1, 
+          isActive: true, 
+          purchaseGoal: 1000, 
+          participants: 50, 
+          createdAt: '2025-05-01T12:00:00Z', 
+          endsAt: '2025-06-01T12:00:00Z' 
+        }
+      },
+
+      {
+        id: 1001,
+        name: "Paceña",
+        image: "https://www.cerveza-pacena.com/sites/g/files/wnfebl10741/files/styles/webp/public/Pace%C3%B1a/Home/620.png.webp?itok=Dqx-UQMi",
+        price: 22.50,
+        stock: 100,
+        group: {
+              id: 1,
+              purchaseGoal: 10,
+              participants: 6,
+              isActive: true,
+              createdAt: "2025-03-25",
+              endsAt: "2025-03-31T12:00:00Z"
+          }
+      },
+
+      { 
+        id: 2, 
+        name: 'Product 2', 
+        image: 'assets/product2.jpg', 
+        price: 200, 
+        stock: 30, 
+        group: { 
+          id: 2, 
+          isActive: false, 
+          purchaseGoal: 500, 
+          participants: 20, 
+          createdAt: '2025-04-01T12:00:00Z', 
+          endsAt: '2025-05-01T12:00:00Z' 
+        }
+      },
+      { 
+        id: 3, 
+        name: 'Product 3', 
+        image: 'assets/product3.jpg', 
+        price: 300, 
+        stock: 20, 
+        group: { 
+          id: 3, 
+          isActive: true, 
+          purchaseGoal: 1500, 
+          participants: 100, 
+          createdAt: '2025-03-01T12:00:00Z', 
+          endsAt: '2025-06-01T12:00:00Z' 
+        }
+      }
+    ];
+  
+    constructor() {}
+  
+    getProduct(id: number): Observable<Product> {
+      const product = this.products.find(p => p.id === id);
+      return of(product!); // Devuelve el producto encontrado como un Observable
+    }
 
   async getProducts() : Promise<Product[]>{
     
