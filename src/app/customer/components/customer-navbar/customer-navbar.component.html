@@ -19,25 +19,26 @@
                         <span class="material-symbols-outlined desktop">
                             keyboard_arrow_down
                         </span>
-                        <div class="dropdown-menu">
+                        <span class="material-symbols-outlined mobile" (click)="toggleMobileMenu()">
+                            menu
+                        </span>
+                        <div class="overlay" *ngIf="isMobileMenuOpen" (click)="toggleMobileMenu()"></div>
+                        <div class="dropdown-menu" ngClass="{{isMobileMenuOpen? 'open' : 'closed'}}" (click)="$event.stopPropagation()">
                             <ul>
                                 <li>
-                                    pagina 1
+                                    Iniciar sesion
                                 </li>
                                 <li>
-                                    pagina 2
+                                    Mis compras
                                 </li>
                                 <li>
-                                    pagina 3
+                                    ¿quieres vender en Vaquita?
                                 </li>
                                 <li>
-                                    pagina 4
+                                    Sobre nosotros
                                 </li>
                             </ul>
                         </div>
-                        <span class="material-symbols-outlined mobile">
-                            menu
-                        </span>
                     </button>
                 </div>
             </div>

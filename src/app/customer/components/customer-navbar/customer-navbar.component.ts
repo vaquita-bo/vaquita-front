@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class CustomerNavbarComponent {
   @Output() categorySelected = new EventEmitter<number>();
   @Output() searchTermChanged = new EventEmitter<string>();
+  isMobileMenuOpen = false;
   selectedCategoryId: number = 1;
   searchTerm: string = '';
 
@@ -40,8 +41,7 @@ export class CustomerNavbarComponent {
     }
   }
   
-
-  
-
-
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 }
