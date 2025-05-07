@@ -1,0 +1,40 @@
+<div class="agendas-container">
+  <div *ngFor="let producto of productosAgendados" class="agenda-card">
+    <div class="card-header">
+      <h3 class="producto-titulo">{{ producto.titulo }}</h3>
+    </div>
+
+    <div class="producto-content">
+      <div class="producto-imagen-container">
+        <img [src]="producto.imagen" [alt]="producto.titulo" class="producto-imagen" loading="lazy">
+      </div>
+      <div class="producto-info">
+        <p class="dato-producto">CARACTERISTICAS</p>
+        <p class="dato-producto">Precio total: <span class="detalle-producto">{{ producto.precioTotal }} Bs</span></p>
+        <p class="dato-producto">Inicio de oferta: <span class="detalle-producto">{{ producto.inicioOferta }}</span></p>
+        <p class="dato-producto">Fin de oferta: <span class="detalle-producto">{{ producto.finOferta }}</span></p>
+        <p class="dato-producto">Fecha de venta: <span class="detalle-producto">{{ producto.fechaVenta }}</span></p>
+      </div>
+      <div class="entrega-details">
+        <p class="dato-producto">DETALLES DE ENTREGA</p>
+        <p class="dato-producto">Lugar:
+          <a href="#" (click)="abrirMapa(producto.entrega.mapa); $event.preventDefault()" class="mapa-link">
+            {{ producto.entrega.lugar }}
+          </a>
+        </p>
+        <p class="dato-producto">Fecha:<span class="detalle-producto"> {{ producto.entrega.fecha }}</span></p>
+        <p class="dato-producto">Hora:<span class="detalle-producto"> {{ producto.entrega.hora }}</span></p>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="cambiar-btn" (click)="cambiarEntrega(producto.id)">Cambiar entrega</button>
+    </div>
+  </div>
+</div>
+
+<app-formulario-entrega
+  *ngIf="mostrarFormularioEntrega"
+  [productoId]="productoSeleccionadoId"
+  (formularioCerrado)="onFormularioCerrado()"
+  (entregaConfirmada)="onEntregaConfirmada($event)">
+</app-formulario-entrega>

@@ -1,0 +1,103 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.formulario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.formulario-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.cerrar-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c60000;
+}
+
+.cerrar-btn:hover {
+  color: #901C17;
+}
+
+form p {
+  margin: 15px 0 5px;
+}
+
+.sub-text {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.opcion {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.link-direccion {
+  display: block;
+  margin-left: 20px;
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.link-direccion:hover {
+  text-decoration: underline;
+}
+
+.grupo-radio {
+  margin: 10px 0 15px;
+}
+
+.confirmar-btn {
+  background-color: #c60000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.confirmar-btn:hover {
+  background-color: #901C17;
+}
+
+.confirmar-btn[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}

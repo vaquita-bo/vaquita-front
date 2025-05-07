@@ -1,0 +1,121 @@
+.agendas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.agenda-card {
+  border: 0.5px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  position: relative; /* Necesario para posicionar el botón dentro */
+  padding-bottom: 10px
+}
+
+
+.agenda-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  background-color: #C2C2C2;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 0.5px solid black;
+}
+
+.producto-titulo {
+  margin: 15px;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.producto-content {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.producto-imagen-container {
+  flex: 0 0 150px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.producto-imagen:hover {
+  transform: scale(1.05);
+}
+
+.producto-info {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+.dato-producto {
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+  color: black;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.detalle-producto {
+  font-weight: 100;
+  color: black;
+  font-size: 1rem;
+}
+
+
+.entrega-details {
+  background-color: white;
+}
+
+.mapa-link {
+  color: #1a73e8;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mapa-link:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.cambiar-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #c60000;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cambiar-btn:hover {
+  background-color: #901C17;
+}
