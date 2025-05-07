@@ -6,11 +6,9 @@ import { RouterLink } from '@angular/router';
 import { toast } from 'ngx-sonner';
 import { MatCardModule } from '@angular/material/card'
 import { MatButtonModule } from '@angular/material/button';
-import { CurrencyPipe } from '@angular/common';
-
 @Component({
   selector: 'app-product-card',
-  imports: [RouterLink,MatCardModule,MatButtonModule,CurrencyPipe],
+  imports: [RouterLink,MatCardModule,MatButtonModule],
   template: `
     
         <mat-card appearance="outlined" [routerLink]="['/product', product().id]"
@@ -24,7 +22,7 @@ import { CurrencyPipe } from '@angular/common';
           <img mat-card-image src={{product().image}} />
         <div class="details">
             <p class="name">{{product().name}}</p>
-            <p class="price">{{product().price | currency : '': '' }} Bs </p>
+            <p class="price">{{product().price}} Bs</p>
         </div>
         
         <span class="stock" 
@@ -40,7 +38,7 @@ import { CurrencyPipe } from '@angular/common';
             </span>
         }
         <mat-card-actions align="end">
-          <button mat-raised-button> Comprar </button>
+          <button mat-button> Comprar </button>
         </mat-card-actions>
         </mat-card>
     
@@ -82,16 +80,9 @@ import { CurrencyPipe } from '@angular/common';
       padding: .5em;
       border-radius: 1em;
     }
-    section#video {
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      align-items: center;
-    }
   `
 })
 export class ProductCardComponent {
-  
   product = input.required<Product>()
 
   click = () => {
