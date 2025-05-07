@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Output } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Input, Output } from '@angular/core';
 import { Category } from '../../../shared/models/category.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +14,7 @@ import '@justinribeiro/lite-youtube';
 export class CustomerNavbarComponent {
   @Output() categorySelected = new EventEmitter<number>();
   @Output() searchTermChanged = new EventEmitter<string>();
+  @Input() showVideo!: boolean;
   isMobileMenuOpen = false;
   selectedCategoryId: number = 1;
   searchTerm: string = '';

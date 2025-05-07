@@ -4,20 +4,18 @@ import { ProductDetailComponent } from './client/pages/product-detail/product-de
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'productos',
-    pathMatch: 'full'
-  },
-  {
     path: 'productos',
-    component: ProductListComponent
-  },
-  {
-    path: 'productos/:id',
-    component: ProductDetailComponent
+    loadComponent: () => import('./layout/customer-layout/customer-layout.component').then(m => m.CustomerLayoutComponent),
+    children: [
+      {
+        path: ':id',
+        loadComponent: () =>
+          import('./client/pages/product-detail/product-detail.component').then(m => m.ProductDetailComponent),
+      }
+    ]
   },
   {
     path: '**',
-    redirectTo: 'productos'  // o puedes mostrar un componente de "404 Not Found"
-  }
+    redirectTo: 'productos'
+  },
 ];
