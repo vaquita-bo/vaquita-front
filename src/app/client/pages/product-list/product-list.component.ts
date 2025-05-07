@@ -7,27 +7,21 @@ import { Product } from '../../../shared/models/product.model';
 @Component({
   selector: 'app-product-list',
   imports: [ProductCardComponent],
-  template: `
-    <h2>Ofertas activas</h2>
-    <div class="products-container">
-        @for(product of products()['offers']; track product.id) {
-          <app-product-card [product]="product" />
-        }
-    </div>
-    <h2>Nuestros Productos</h2>
-    <div class="products-container">
-        @for(product of products()['regulars']; track product.id) {
-          <app-product-card [product]="product" />
-        }
-    </div>
-  `,
+  templateUrl: './product-list.component.html',
   styles: `
+  section#video {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: center;
+    }
   .products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
   }
+
   `
 })
 export class ProductListComponent implements OnInit {
@@ -42,5 +36,9 @@ export class ProductListComponent implements OnInit {
       }
       this.products.set(lodash.groupBy(ps, predicate));
 
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: "smooth" });
   }
 }

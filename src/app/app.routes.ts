@@ -1,10 +1,14 @@
 import { Routes } from '@angular/router';
-import { ProductListComponent } from './client/pages/product-list/product-list.component';
+import { ProductListComponent } from './customer/components/product-list/product-list.component';
 
 export const routes: Routes = [
     {
-        path: '',
+        path: '**',
         pathMatch: 'full',
-        component: ProductListComponent
+        redirectTo: 'productos'
+    },
+    {
+        path: 'productos',
+        component:  ProductListComponent
     }
 ];
