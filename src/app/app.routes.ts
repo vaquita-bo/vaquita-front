@@ -16,14 +16,14 @@ export const routes: Routes = [
     ]
   },
   {
-    path: '**',
-    redirectTo: 'productos'
-  },
-  {
     path: 'vendedor',
     pathMatch: 'full',
     component: VistaPrincipalComponent
 
-  }
+  },
+  {
+    path: '**',
+    redirectTo: 'productos'
+  }  
 
 ];

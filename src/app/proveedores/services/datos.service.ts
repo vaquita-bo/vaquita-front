@@ -43,7 +43,7 @@ export interface DatosProductos {
   providedIn: 'root'
 })
 export class DatosService {
-  private datosUrl = 'assets/data/productos.json';
+  private datosUrl = 'productos.json';
   constructor(private http: HttpClient) { }
 
   getDatos(): Observable<DatosProductos> {
