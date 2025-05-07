@@ -9,7 +9,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFabButton } from '@angular/material/button';
 @Component({
   selector: 'app-product-list',
-  imports: [ProductCardComponent, BannerComponent, MatFabButton,MatChipsModule],
+  imports: [ProductCardComponent],
   templateUrl: './product-list.component.html',
   styles: `
   section#video {
