@@ -214,9 +214,10 @@
     }
     @media (max-width: 768px){
         border-bottom: 1px solid #d3d3d3;
+        height: 60px;
         .categories-list{
             li{
-                margin: 6px 5px;
+                margin: 12px 5px;
                 text-wrap: nowrap;
                 background-color: #EEEEEE;
                 border-radius: 20px;
@@ -239,5 +240,23 @@
                 display: none;
             }
         }
+    }
+}
+
+.video-section{
+    overflow: hidden;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .youtube-video{
+        width: 100% ; /* Aplicar a demas componentes */
+        max-width: 1400px; /* Aplicar a demas componentes */
+        height: 100%;
+    }
+
+    @media (max-width: 768px){
+        height: 100%;
     }
 }

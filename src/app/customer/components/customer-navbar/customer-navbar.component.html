@@ -45,6 +45,10 @@
         </nav>
     </section>
 
+    <section class="video-section">
+        <lite-youtube class="youtube-video" videoid="km9-1H3hzhw"></lite-youtube>
+    </section>
+    
     <section class="categories-section">
         <ul class="categories-list">
             <li *ngFor="let category of categories" (click)="onCategorySelect(category.id)" ngClass="{{category.id === selectedCategoryId ? 'active' : ''}}">

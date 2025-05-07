@@ -1,13 +1,15 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Output } from '@angular/core';
 import { Category } from '../../../shared/models/category.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import '@justinribeiro/lite-youtube';
 
 @Component({
   selector: 'app-customer-navbar',
   imports: [CommonModule, FormsModule],
   templateUrl: './customer-navbar.component.html',
-  styleUrl: './customer-navbar.component.css'
+  styleUrl: './customer-navbar.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CustomerNavbarComponent {
   @Output() categorySelected = new EventEmitter<number>();
