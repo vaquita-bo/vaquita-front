@@ -1,21 +1,30 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<nav class="navbar-proveedor">
-  <div class="navbar-content">
-    <div class="dropdown" (mouseenter)="dropdownAbierto = true"
-         (mouseleave)="dropdownAbierto = false">
-      <button class="dropbtn">
-        Vendedor
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content" *ngIf="dropdownAbierto">
-        <a *ngFor="let vista of vistas" (click)="vistaSeleccionada = vista.valor; cambiarVista(); dropdownAbierto = false">
-          {{ vista.texto }}
-        </a>
+<article>
+  <section class="navbar-section">
+    <nav class="navbar-proveedor">
+      <div class="left">
+        <div class="logo">VAQUITA</div>
       </div>
-    </div>
-  </div>
-</nav>
+    
+      <div class="rigth navbar-content">
+        <div class="menu">
+          <div class="dropdown" (mouseenter)="dropdownAbierto = true"
+              (mouseleave)="dropdownAbierto = false">
+            <button class="dropbtn">
+              Vendedor
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" *ngIf="dropdownAbierto">
+              <a *ngFor="let vista of vistas" (click)="vistaSeleccionada = vista.valor; cambiarVista(); dropdownAbierto = false">
+                {{ vista.texto }}
+              </a>
+            </div>
+          </div>
+        </div> <!--end menu-->
+      </div>
+    </nav>
+  </section>
+</article>
 
