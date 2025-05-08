@@ -1,1 +1,42 @@
-<p>formulario-entrega works!</p>
+<div class="modal-overlay">
+  <div class="modal-content">
+    <div class="formulario-header">
+      <h2>FORMULARIO ENTREGA DE PRODUCTO</h2>
+      <button class="cerrar-btn" (click)="cerrarFormulario()">✕</button>
+    </div>
+
+    <form [formGroup]="formularioEntrega" (ngSubmit)="confirmarEntrega()">
+      <p><strong>¿Dónde desea entregar su producto?</strong></p>
+      <p class="sub-text">(Seleccione una dirección de entrega)</p>
+
+      <div *ngFor="let direccion of direcciones">
+        <label class="opcion">
+          <input type="radio" formControlName="direccion" [value]="direccion.label">
+          {{ direccion.label }}
+        </label>
+        <a [href]="direccion.url" target="_blank" class="link-direccion">{{ direccion.url }}</a>
+      </div>
+
+      <p><strong>¿Cuándo desea entregar su producto?</strong></p>
+      <p class="sub-text">(Seleccione día y hora disponibles)</p>
+
+      <p><strong>Día:</strong></p>
+      <div class="grupo-radio">
+        <label *ngFor="let dia of dias" class="opcion">
+          <input type="radio" formControlName="dia" [value]="dia">
+          {{ dia }}
+        </label>
+      </div>
+
+      <p><strong>Hora disponible ese día:</strong></p>
+      <div class="grupo-radio">
+        <label *ngFor="let hora of horas" class="opcion">
+          <input type="radio" formControlName="hora" [value]="hora">
+          {{ hora }}
+        </label>
+      </div>
+
+      <button type="submit" class="confirmar-btn" [disabled]="formularioEntrega.invalid">Confirmar</button>
+    </form>
+  </div>
+</div>

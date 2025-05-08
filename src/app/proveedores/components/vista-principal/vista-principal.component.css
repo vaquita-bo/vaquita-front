@@ -1,0 +1,11 @@
+.vista-proveedor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.vista-contenido {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}

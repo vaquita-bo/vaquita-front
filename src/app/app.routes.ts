@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ProductListComponent } from './customer/components/product-list/product-list.component';
 import { ProductDetailComponent } from './client/pages/product-detail/product-detail.component';
+import {VistaPrincipalComponent} from './proveedores/components/vista-principal/vista-principal.component';
 
 export const routes: Routes = [
   {
@@ -15,7 +16,14 @@ export const routes: Routes = [
     ]
   },
   {
+    path: 'vendedor',
+    pathMatch: 'full',
+    component: VistaPrincipalComponent
+
+  },
+  {
     path: '**',
     redirectTo: 'productos'
-  },
+  }  
+
 ];

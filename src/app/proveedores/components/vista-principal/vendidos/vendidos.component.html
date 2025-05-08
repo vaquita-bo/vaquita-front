@@ -1,1 +1,27 @@
-<p>vendidos works!</p>
+<div class="vendidos-container">
+  <div *ngFor="let producto of productosVendidos" class="vendido-card">
+    <div class="card-header">
+    <h3 class="producto-titulo">{{ producto.titulo }}</h3>
+    </div>
+
+    <div class="producto-content">
+      <div class="producto-imagen-container">
+        <img [src]="producto.imagen" [alt]="producto.titulo" class="producto-imagen" loading="lazy">
+      </div>
+      <div class="producto-info">
+        <p class="dato-producto">Precio total: <span class="detalle-producto">{{ producto.precioTotal }} Bs</span></p>
+        <p class="dato-producto">Inicio de oferta: <span class="detalle-producto">{{ producto.inicioOferta }}</span></p>
+        <p class="dato-producto">Fin de oferta: <span class="detalle-producto">{{ producto.finOferta }}</span></p>
+        <p class="dato-producto">Fecha de venta: <span class="detalle-producto">{{ producto.fechaVenta }}</span></p>
+      </div>
+    </div>
+    <button class="agendar-btn" (click)="agendarEntrega(producto.id)">Agendar entrega</button>
+  </div>
+</div>
+
+<app-formulario-entrega
+  *ngIf="mostrarFormularioEntrega"
+  [productoId]="productoSeleccionadoId"
+  (formularioCerrado)="onFormularioCerrado()"
+  (entregaConfirmada)="onEntregaConfirmada($event)">
+</app-formulario-entrega>
