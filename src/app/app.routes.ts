@@ -9,6 +9,12 @@ export const routes: Routes = [
     loadComponent: () => import('./layout/customer-layout/customer-layout.component').then(m => m.CustomerLayoutComponent),
     children: [
       {
+        path: '',
+        loadComponent: () =>
+          import('./client/pages/product-list/product-list.component').then(m => m.ProductListComponent),
+      },
+      
+      {       
         path: ':id',
         loadComponent: () =>
           import('./client/pages/product-detail/product-detail.component').then(m => m.ProductDetailComponent),
