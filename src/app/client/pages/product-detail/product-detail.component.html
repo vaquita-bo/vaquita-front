@@ -1,3 +1,4 @@
+<section class="product-detail-section">
 <div *ngIf="product" class="product-container">
     <div class="product-image-container">
       <img [src]="product.image" [alt]="product.name" class="product-image" />
@@ -15,7 +16,6 @@
       <div class="product-group" *ngIf="product.group">
         <h3>Información del Grupo</h3>
         <ul>
-          <li><strong>ID del grupo:</strong> {{ product.group?.id }}</li>
           <li><strong>Activo:</strong> {{ product.group?.isActive ? 'Sí' : 'No' }}</li>
           <li><strong>Participantes:</strong> {{ product.group?.participants }}</li>
           <li><strong>Creado:</strong> {{ product.group?.createdAt | date }}</li>
@@ -26,4 +26,5 @@
       <button class="buy-button">Comprar</button>
     </div>
   </div>
+</section>
   

@@ -16,7 +16,7 @@ export class ProductDetailComponent implements OnInit {
   route = inject(ActivatedRoute);
   productService = inject(ProductService);
   product: Product | undefined;
-
+  
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.productService.getProduct(id).subscribe((data: Product) => {

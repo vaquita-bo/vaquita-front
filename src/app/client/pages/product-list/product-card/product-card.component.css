@@ -2,7 +2,7 @@
     background-color: white;
     min-width: 150px;
     height: 250px;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgb(22, 22, 32);
     padding: 6px;
     display: flex;
@@ -15,16 +15,16 @@
     height: 80%;
     overflow: hidden;
     object-fit: contain;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .card button {
     display: none;
     position: absolute;
-    background-color: white ;
+    background-color: #bd0000;
+    color: white;
+    border: none;
     margin: 100px auto; 
-    border-radius: 20px;
-    box-shadow: 2px 2px 2px  rgb(22, 22, 32);
 }
 
 .card:hover button {
