@@ -1,0 +1,121 @@
+.product-detail-section{
+  padding: 20px 160px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+  
+    .product-image-container {
+      flex: 0 0 300px;
+      display: flex;
+      justify-content: center;
+  
+      .product-image {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+  
+    .product-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 280px;
+  
+      .product-title {
+        margin: 0 0 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+  
+      .product-price {
+        color: red;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+  
+      .product-stock {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+  
+      .product-group {
+        margin-bottom: 1.5rem;
+  
+        h3 {
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+          color: #333;
+        }
+  
+        ul {
+          padding-left: 1.5rem;
+  
+          li {
+            margin-bottom: 0.4rem;
+          }
+        }
+      }
+  
+      .buy-button {
+        align-self: flex-start;
+        padding: 0.6rem 1.5rem;
+        background-color: #bd0000;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #660808;
+        }
+      }
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .product-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      .product-image-container,
+      .product-info {
+        width: 100%;
+      }
+  
+      .product-info {
+        align-items: center;
+  
+        .product-title,
+        .product-price,
+        .product-stock,
+        .product-group {
+          text-align: center;
+        }
+  
+        .buy-button {
+          align-self: center;
+        }
+      }
+    }
+  }
+  

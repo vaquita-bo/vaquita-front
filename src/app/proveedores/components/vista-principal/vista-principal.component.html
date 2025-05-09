@@ -1,1 +1,13 @@
-<p>vista-principal works!</p>
+<div class="vista-proveedor-container">
+  <!-- Navbar de proveedor -->
+  <app-navbar-proveedor
+    (cambioVista)="cambiarVista($event)">
+  </app-navbar-proveedor>
+
+  <!-- Contenido dinámico según la vista seleccionada -->
+  <div class="vista-contenido">
+    <app-mis-ventas *ngIf="vistaActual === VistaProveedor.misVentas"></app-mis-ventas>
+    <app-vendidos *ngIf="vistaActual === VistaProveedor.vendido"></app-vendidos>
+    <app-agendas *ngIf="vistaActual === VistaProveedor.enProceso"></app-agendas>
+  </div>
+</div>

@@ -1,1 +1,28 @@
-<p>mis-ventas works!</p>
+<div class="productos-container">
+  <div *ngFor="let producto of productos" class="producto-card">
+    <div class="card-header">
+      <h3 class="producto-titulo">{{ producto.titulo }}</h3>
+        <div class="progress-circle">
+          <svg class="progress-ring" width="60" height="60">
+            <circle class="progress-ring-circle-bg" cx="30" cy="30" r="20" stroke-width="6"></circle>
+            <circle class="progress-ring-circle"
+                    cx="30" cy="30" r="20" stroke-width="6" stroke="black"
+                    [style.stroke-dashoffset]="CIRCUNFERENCIA - (CIRCUNFERENCIA * calcularPorcentaje(producto.progreso.actual, producto.progreso.total) / 100)"></circle>
+          </svg>
+          <div class="progress-text">{{ producto.progreso.actual }}/{{ producto.progreso.total }}</div>
+        </div>
+    </div>
+
+    <div class="producto-content">
+      <div class="producto-imagen-container">
+        <img [src]="producto.imagen" alt="{{ producto.titulo }}" class="producto-imagen">
+      </div>
+      <div class="producto-info">
+        <p class="dato-producto">Precio total: <span class="detalle-producto">{{ producto.precioTotal }} Bs</span></p>
+        <p class="dato-producto">Inicio de oferta: <span class="detalle-producto">{{ producto.inicioOferta }}</span></p>
+        <p class="dato-producto">Fin de oferta: <span class="detalle-producto">{{ producto.finOferta }}</span></p>
+        <p class="dato-producto">Descripción: <span class="detalle-producto">{{ producto.descripcion }}</span></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<article>
+    <section class="product-list-section">
+        <div class="header">
+            <h1>
+                TODOS LOS PRODUCTOS
+            </h1>  
+            <button class="filter">
+                Ordenar
+                <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                </span>
+            </button>
+                  
+        </div>
+        <div #offer id="offers" class="products-container">
+            @for(product of products()['offers']; track product.id) {
+                <app-product-card [product]="product" />
+            }
+
+            @for(product of products()['regulars']; track product.id) {
+                <app-product-card [product]="product" />
+            }
+        </div>
+    </section>
+</article>

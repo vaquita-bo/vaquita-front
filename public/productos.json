@@ -1,0 +1,136 @@
+{
+  "productosVendidos": [
+    {
+      "id": 1,
+      "titulo": "Producto Vendido 1",
+      "precioTotal": 1500,
+      "inicioOferta": "28/04/2025",
+      "finOferta": "05/05/2025",
+      "fechaVenta": "05/05/2025",
+      "descripcion": "Producto vendido con éxito. It is a long established fact that a reader will be distracted.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Producto Vendido 2",
+      "precioTotal": 2200,
+      "inicioOferta": "29/04/2025",
+      "finOferta": "06/05/2025",
+      "fechaVenta": "06/05/2025",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Oferta Vendida 3",
+      "precioTotal": 1800,
+      "inicioOferta": "30/04/2025",
+      "finOferta": "07/05/2025",
+      "fechaVenta": "07/05/2025",
+      "descripcion": "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "Producto Vendido 4",
+      "precioTotal": 2500,
+      "inicioOferta": "01/05/2025",
+      "finOferta": "08/05/2025",
+      "fechaVenta": "08/05/2025",
+      "descripcion": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg"
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "titulo": "Producto Premium 1",
+      "precioTotal": 1500,
+      "inicioOferta": "28/04/2025",
+      "finOferta": "05/05/2025",
+      "descripcion": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg",
+      "progreso": { "actual": 3, "total": 16 }
+    },
+    {
+      "id": 2,
+      "titulo": "Producto Estrella 2",
+      "precioTotal": 2000,
+      "inicioOferta": "29/04/2025",
+      "finOferta": "06/05/2025",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg",
+      "progreso": { "actual": 5, "total": 5 }
+    },
+    {
+      "id": 3,
+      "titulo": "Oferta Especial 3",
+      "precioTotal": 1800,
+      "inicioOferta": "30/04/2025",
+      "finOferta": "07/05/2025",
+      "descripcion": "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg",
+      "progreso": { "actual": 1, "total": 10 }
+    },
+    {
+      "id": 4,
+      "titulo": "Nuevo Producto 4",
+      "precioTotal": 2500,
+      "inicioOferta": "01/05/2025",
+      "finOferta": "08/05/2025",
+      "descripcion": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg",
+      "progreso": { "actual": 7, "total": 10 }
+    }
+  ],
+  "productosAgendados": [
+    {
+      "id": 1,
+      "titulo": "Producto Agendado 1",
+      "precioTotal": 1500,
+      "inicioOferta": "28/04/2025",
+      "finOferta": "05/05/2025",
+      "fechaVenta": "05/05/2025",
+      "descripcion": "Producto vendido y agendado para entrega. It is a long established fact that a reader will be distracted.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg",
+      "entrega": {
+        "lugar": "Av. Heroínas N.º 1234",
+        "mapa": "https://maps.app.goo.gl/Dle4fg/isBreat",
+        "fecha": "05/05/2025",
+        "hora": "14:00 – 15:00"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Producto Agendado 2",
+      "precioTotal": 2200,
+      "inicioOferta": "29/04/2025",
+      "finOferta": "06/05/2025",
+      "fechaVenta": "06/05/2025",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg",
+      "entrega": {
+        "lugar": "Calle Jordán #567",
+        "mapa": "https://maps.app.goo.gl/xyz123",
+        "fecha": "06/05/2025",
+        "hora": "10:00 – 12:00"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Producto Agendado 3",
+      "precioTotal": 1800,
+      "inicioOferta": "30/04/2025",
+      "finOferta": "07/05/2025",
+      "fechaVenta": "07/05/2025",
+      "descripcion": "Vivamus luctus eros aliquet convallis ultricies.",
+      "imagen": "https://tradepallet.com/wp-content/uploads/2022/11/como-vender-m%C3%A1s-fruta-y-verduras.jpg",
+      "entrega": {
+        "lugar": "Plaza Principal #789",
+        "mapa": "https://maps.app.goo.gl/abc456",
+        "fecha": "07/05/2025",
+        "hora": "16:00 – 18:00"
+      }
+    }
+  ]
+}
