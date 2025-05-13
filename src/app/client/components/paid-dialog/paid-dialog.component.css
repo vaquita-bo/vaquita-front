@@ -1,11 +1,21 @@
 section#paid {
     
     width: 500px;
-    height: 200px;
+    height: 250px;
     padding: 30px;
+}
+.verified{
+    font-size: 70px;
+    color: #00bd10;
 }
 .paid-content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .gray{
+        color:rgb(106, 106, 106);
+    }
 }
