@@ -1,0 +1,22 @@
+<section id="payment">
+    <button mat-fab-button class="close-button" (click)="closeSelf()">X
+    </button>
+
+    <div mat-dialog-content class="payment-content">
+       <img src="BNB_Simple.png" width=200 alt="QR alter">
+       <div class="payment-detail">
+        <p> Freidora </p>
+        <p> 500 Bs</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores et maiores perspiciatis dolorum nulla beatae molestias illum praesentium quod eum accusamus labore, ut doloribus earum nesciunt sed. Repellendus, unde.
+        </p>
+        <div mat-dialog-actions>
+            <button mat-flat-button >Descargar</button>
+            <button mat-flat-button class="paid-button"
+                (click)="onPaidButton()"
+            >Ya realize el pago</button>
+        </div>
+       </div> 
+    </div>
+    
+</section>
