@@ -15,9 +15,6 @@ export class PaymentDialogComponent {
 
   }
 
-  onPaidButton(){
-    this.dialogRef.close()
-  }
   closeSelf(){
     this.dialogRef.close()
   }

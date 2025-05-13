@@ -5,15 +5,15 @@
     <div mat-dialog-content class="payment-content">
        <img src="BNB_Simple.png" width=200 alt="QR alter">
        <div class="payment-detail">
-        <p> Freidora </p>
-        <p> 500 Bs</p>
+        <h3> {{data.product.name}} </h3>
+        <p> {{data.product.price}} Bs</p>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores et maiores perspiciatis dolorum nulla beatae molestias illum praesentium quod eum accusamus labore, ut doloribus earum nesciunt sed. Repellendus, unde.
+            {{data.product.description ?? data.product.name}} 
         </p>
         <div mat-dialog-actions>
             <button mat-flat-button >Descargar</button>
             <button mat-flat-button class="paid-button"
-                (click)="onPaidButton()"
+                [mat-dialog-close]="true"
             >Ya realize el pago</button>
         </div>
        </div> 
