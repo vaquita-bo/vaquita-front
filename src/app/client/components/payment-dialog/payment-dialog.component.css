@@ -1,0 +1,26 @@
+.section#payment {
+    width: '500px'
+}
+
+.payment-content{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.payment-detail {
+   
+}
+
+.close-button {
+    position: absolute;
+    right: 0;
+    margin: 5px;
+}
+
+.mat-flat-button.paid-button {
+    background: #bd0000;
+}
+.mat-flat-button.paid-button:hover {
+    background: #660808;
+}
