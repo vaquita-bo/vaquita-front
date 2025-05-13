@@ -5,6 +5,7 @@ import { Product } from "../../../shared/models/product.model";
 import { CommonModule } from '@angular/common';
 import { PaymentDialogComponent } from '../../components/payment-dialog/payment-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { PaidDialogComponent } from '../../components/paid-dialog/paid-dialog.component';
 
 
 @Component({
@@ -30,11 +31,23 @@ export class ProductDetailComponent implements OnInit {
 
   openPaymentDialog(){
     let dialogRef = this.dialog.open(
-      PaymentDialogComponent,
-    );
-
-    dialogRef.afterClosed().subscribe(result => {
-      alert(result);
+      PaymentDialogComponent, {data: { 
+        product: this.product
+      }});
+    dialogRef.afterClosed().subscribe(result =>{
+      if(result===true){
+        this.openPaidDialog();
+      }
     })
+  }
+
+  openPaidDialog(){
+    let dialogRef = this.dialog.open(
+      PaidDialogComponent, {
+        data: {
+          product: this.product
+        }
+      }
+    );
   }
 }

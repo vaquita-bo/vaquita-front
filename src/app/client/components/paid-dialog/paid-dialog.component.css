@@ -1,0 +1,11 @@
+section#paid {
+    
+    width: 500px;
+    height: 200px;
+    padding: 30px;
+}
+.paid-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

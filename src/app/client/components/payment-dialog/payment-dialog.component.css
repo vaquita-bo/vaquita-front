@@ -4,7 +4,9 @@
 
 .payment-content{
     display: flex;
+    padding: 30px;
     gap: 30px;
+    align-content: center;
     align-items: center;
 }
 
@@ -18,9 +20,11 @@
     margin: 5px;
 }
 
-.mat-flat-button.paid-button {
-    background: #bd0000;
+.paid-button {
+    background-color: #bd0000;
+    border: 2px dashed #bd0000;
+    color: white;
 }
-.mat-flat-button.paid-button:hover {
+.paid-button:hover {
     background: #660808;
 }
