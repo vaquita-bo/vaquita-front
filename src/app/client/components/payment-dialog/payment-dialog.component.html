@@ -10,9 +10,9 @@
         <p>
             {{data.product.description ?? data.product.name}} 
         </p>
-        <div mat-dialog-actions>
-            <button mat-flat-button >Descargar</button>
-            <button mat-flat-button class="paid-button"
+        <div mat-dialog-actions class="buttons">
+            <button mat-flat-button id="download-button">Descargar</button>
+            <button mat-flat-button id="paid-button"
                 [mat-dialog-close]="true"
             >Ya realize el pago</button>
         </div>

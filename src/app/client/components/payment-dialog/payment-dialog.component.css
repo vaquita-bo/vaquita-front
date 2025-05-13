@@ -10,8 +10,14 @@
     align-items: center;
 }
 
+/*  TODO: use class for description style
 .payment-detail {
    
+}*/
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .close-button {
@@ -19,12 +25,22 @@
     right: 0;
     margin: 5px;
 }
-
-.paid-button {
-    background-color: #bd0000;
-    border: 2px dashed #bd0000;
+button {
+    margin: 10px;
+}
+button#download-button {
+    background-color:#222;
     color: white;
 }
-.paid-button:hover {
+button#download-button:hover {
+    background: black;
+}
+
+
+button#paid-button {
+    background-color: #bd0000;
+    color: white;
+}
+button#paid-button:hover {
     background: #660808;
 }
