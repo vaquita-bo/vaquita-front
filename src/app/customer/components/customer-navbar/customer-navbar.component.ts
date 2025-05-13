@@ -3,6 +3,7 @@ import { Category } from '../../../shared/models/category.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import '@justinribeiro/lite-youtube';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-customer-navbar',
@@ -31,7 +32,8 @@ export class CustomerNavbarComponent {
     { id: 8, name: 'Deportes' },
     { id: 9, name: 'Videojuegos' },
   ];
-
+  constructor(private router: Router) {
+  }
   onCategorySelect(categoryId: number) {
     this.selectedCategoryId = categoryId;
     this.categorySelected.emit(categoryId);
@@ -43,8 +45,16 @@ export class CustomerNavbarComponent {
       this.searchTerm = '';
     }
   }
-  
+
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  redirectVendedor() {
+    this.router.navigate(['/vendedor']);
+  }
+
+  redirectHome() {
+    this.router.navigate(['/productos']);
   }
 }

@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #aeaeae;
-  
+
   nav{
     height: 44px;
     width: 100% ; /* Aplicar a demas componentes */
@@ -69,6 +69,7 @@
     .left .logo{
         margin: 10px;
         font-size: 30px;
+        cursor: pointer;
     }
 }
 
@@ -77,6 +78,8 @@
     nav .left .logo{
         margin: 15px;/* aplicar a demas componentes, tal vez a la derecha tmbn */
         font-size: 30px;
+        cursor: pointer;
+
     }
     nav .right {
         display: flex;
