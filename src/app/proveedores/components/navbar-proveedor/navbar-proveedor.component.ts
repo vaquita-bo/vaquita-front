@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Output} from '@angular
 import {VistaProveedor} from '../../models/vista-proveedor.enum';
 import {FormsModule} from '@angular/forms';
 import {NgForOf, NgIf} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar-proveedor',
@@ -22,11 +23,14 @@ export class NavbarProveedorComponent {
     { valor: VistaProveedor.vendido, texto: 'Vendidos' },
     { valor: VistaProveedor.enProceso, texto: 'Agendas' }
   ];
-
+  constructor(private router:Router) { }
   vistaSeleccionada: VistaProveedor = VistaProveedor.misVentas;
 
   cambiarVista(): void {
     this.cambioVista.emit(this.vistaSeleccionada);
   }
 
+  redirectHome() {
+    this.router.navigate(['/']);
+  }
 }
