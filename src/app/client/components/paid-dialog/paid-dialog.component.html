@@ -1,0 +1,18 @@
+<section id="paid">
+
+    <div mat-dialog-content class="paid-content">
+        <span class="material-symbols-outlined verified">verified</span>
+        <h2>¡Genial, gracias por comprar con Vaquita!</h2>
+        <p>Tu compra de {{data.product.name}} fue registrada</p>        
+        <br>
+        <p class="gray"> Tu pedido se encuentra en estado de verificacion, recibiras un correo con el detalle de tu compra</p>
+        
+        <br>
+        <!-- todo replace for actual code -->
+        <p class="gray">Pedido: F0123123</p>
+        <p>Fecha de solicitud de compra: {{today | date }}</p>
+        <br>
+        <p>Estara lista hasta el: {{data.product.endDate | date }} </p>
+    </div>
+</section>
+
