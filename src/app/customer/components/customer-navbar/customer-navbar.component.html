@@ -2,7 +2,7 @@
     <section class="navbar-section">
         <nav>
             <div class="left">
-                <div class="logo">VAQUITA</div>
+                <div class="logo" (click)="redirectHome()">VAQUITA</div>
             </div>
             <div class="right">
                 <div class="search-bar">
@@ -28,6 +28,9 @@
                                 <li>
                                     Iniciar sesion
                                 </li>
+                                <li (click)="redirectVendedor()">
+                                    Vendedor
+                                </li>
                                 <li>
                                     Mis compras
                                 </li>
@@ -47,8 +50,8 @@
 
     <section *ngIf="showVideo" class="video-section">
         <lite-youtube class="youtube-video" videoid="km9-1H3hzhw"></lite-youtube>
-    </section> 
-    
+    </section>
+
     <section class="categories-section">
         <ul class="categories-list">
             <li *ngFor="let category of categories" (click)="onCategorySelect(category.id)" ngClass="{{category.id === selectedCategoryId ? 'active' : ''}}">

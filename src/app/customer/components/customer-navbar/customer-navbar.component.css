@@ -22,6 +22,7 @@
         .left .logo{
             margin: 10px;
             font-size: 30px;
+            cursor: pointer;
         }
 
         .right .search-bar{
@@ -55,7 +56,7 @@
 
         .right .menu{
             height: 100%;
-            margin-left: 20px; 
+            margin-left: 20px;
             display: flex;
             align-items: center;
 
@@ -93,7 +94,7 @@
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.126);
                     border-radius: 4px;
                     z-index: 50;
-                    
+
                     ul{
                         width: 150px;
                         list-style: none;
@@ -104,7 +105,7 @@
                     }
                 }
             }
-            
+
             .menu-button:hover {
                 .dropdown-menu{
                     display: block;
@@ -140,7 +141,7 @@
                 margin: 0 15px 0 10px ;/* aplicar 15px a demas componentes, tal vez a la derecha tmbn */
 
                 .mobile{
-                    display: block;                  
+                    display: block;
                 }
                 .menu-button .title, .desktop{
                     display: none;
@@ -181,7 +182,7 @@
                         }
                     }
                }
-            } 
+            }
         }
     }
 }
