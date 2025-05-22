@@ -6,7 +6,7 @@
             </div>
             <div class="right">
                 <div class="search-bar">
-                    <input type="text" placeholder="Buscar productos" [(ngModel)]="searchTerm">
+                    <input type="text" placeholder="Buscar productos" [(ngModel)]="searchTerm" (keydown.enter)="onSearchTerm()">
                     <button  (click)="onSearchTerm()">
                         <span class="material-symbols-outlined">
                             search
@@ -54,7 +54,7 @@
 
     <section class="categories-section">
         <ul class="categories-list">
-            <li *ngFor="let category of categories" (click)="onCategorySelect(category.id)" ngClass="{{category.id === selectedCategoryId ? 'active' : ''}}">
+            <li *ngFor="let category of categories" (click)="onCategorySelect(category)" ngClass="{{category.id === selectedCategory.id ? 'active' : ''}}">
                 {{category.name}}
             </li>
         </ul>

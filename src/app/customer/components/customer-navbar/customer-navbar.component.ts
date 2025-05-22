@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import '@justinribeiro/lite-youtube';
 import {Router} from '@angular/router';
+import { ProductCategory } from '../../models/product-category-model';
 
 @Component({
   selector: 'app-customer-navbar',
@@ -13,16 +14,16 @@ import {Router} from '@angular/router';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CustomerNavbarComponent {
-  @Output() categorySelected = new EventEmitter<number>();
+  @Output() categorySelected = new EventEmitter<ProductCategory>();
   @Output() searchTermChanged = new EventEmitter<string>();
   @Input() showVideo!: boolean;
   isMobileMenuOpen = false;
-  selectedCategoryId: number = 1;
+  selectedCategory!: ProductCategory;
   searchTerm: string = '';
 
   //HARDCODED CATEGORIES
-  categories: Category[] = [
-    { id: 1, name: 'Todos lo productos' },
+  categories: ProductCategory[] = [
+    { id: 1, name: 'Todos los productos' },
     { id: 2, name: 'Ropa' },
     { id: 3, name: 'Mascotas' },
     { id: 4, name: 'Oficina' },
@@ -34,9 +35,15 @@ export class CustomerNavbarComponent {
   ];
   constructor(private router: Router) {
   }
-  onCategorySelect(categoryId: number) {
-    this.selectedCategoryId = categoryId;
-    this.categorySelected.emit(categoryId);
+
+  ngOnInit() {
+    this.selectedCategory = this.categories[0];
+    this.onCategorySelect(this.selectedCategory);
+  }
+
+  onCategorySelect(category: ProductCategory) {
+    this.selectedCategory = category;
+    this.categorySelected.emit(category);
   }
 
   onSearchTerm() {
