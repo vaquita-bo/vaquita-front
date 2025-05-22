@@ -1,16 +1,48 @@
-<app-customer-navbar></app-customer-navbar>
+<app-customer-navbar 
+    [showVideo]='true' 
+    (categorySelected)="onCategorySelected($event)"
+    (searchTermChanged)="onSearchTermChanged($event)">
+</app-customer-navbar>
 <article>
-    <section class="product-list-section">
+    <section class="product-list-header">
         <div class="header">
-            <h1>
-                TODOS LOS PRODUCTOS
+            <h1 *ngIf="searchTerm; else category">
+                Buscando: {{searchTerm}}
             </h1>
+            <ng-template #category>
+                <h1>
+                    {{selectedCategory!.name}}
+                </h1>
+            </ng-template>
+            
             <button class="filter">
                 Ordenar
                 <span class="material-symbols-outlined">
                     keyboard_arrow_down
                 </span>
             </button>
+        </div>
+    </section>
+    <section class="product-list-body">
+        <div class="product-list">
+            <div class="product" *ngFor="let product of filteredPurchaseGroup" >
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+            <div class="product" *ngFor="let product of filteredPurchaseGroup" >
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+            <div class="product" *ngFor="let product of filteredPurchaseGroup" >
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+            <div class="product" *ngFor="let product of filteredPurchaseGroup" >
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+            <div class="product" *ngFor="let product of filteredPurchaseGroup" >
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+            <div class="product" *ngFor="let product of filteredPurchaseGroup" >
+                <app-product-card [product]="product"></app-product-card>
+            </div>
         </div>
     </section>
 </article>
