@@ -29,10 +29,10 @@ export class PurchaseGroupService {
       minBuyers: 5,
       maxBuyers: 10,
       productId: 1,
-      productName: 'Product A',
-      productImage: "https://www.cerveza-pacena.com/sites/g/files/wnfebl10741/files/styles/webp/public/Pace%C3%B1a/Home/620.png.webp?itok=Dqx-UQMi",
+      productName: 'Poleras',
+      productImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfr4kFPHrL-0tvj_2fVtN9brjbngr_nNKOdw&s",
       productPrice: 29.99,
-      productCategory: 'Category A',
+      productCategory: 'Ropa',
       productDescription: 'Description of Product A'
     },
     {

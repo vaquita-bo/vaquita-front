@@ -1,0 +1,99 @@
+$price-color: rgb(209, 29, 29);
+$category-color: #686868;
+$desktop-buy-button-color: #ffffff;
+$desktop-buy-button-background: #272727;
+$mobile-buy-button-color: white;
+$mobile-buy-button-background: #272727;
+
+.card{
+    border: 1px solid #68686865;
+    padding: 10px 10px 20px 10px;
+    .product-image{
+        width: 100%;
+        aspect-ratio: 1/1;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            background-color: #68686813;
+        }
+        .buy-button{
+            display: none;
+            border: none;
+            width: 90%;
+            height: 40px;
+            position: absolute;  
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $desktop-buy-button-background;
+            color: $desktop-buy-button-color;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+    }
+    .mobile-buy-button{
+        display: none;
+    }
+    .details{
+        padding-top: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        letter-spacing: 0.5px;
+        .name{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .category{
+            font-size: 0.9rem;
+            color: $category-color;
+        }
+       .price{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $price-color;
+        }
+    }
+
+    &:hover{
+        scale: 1.01;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.24);
+        .product-image .buy-button{
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px){
+        padding: 10px;
+        &:hover {
+            scale: 1;
+            .product-image .buy-button{
+                display: none;
+            } 
+        }
+        
+        .details{
+            .mobile-buy-button{
+                display: block;
+                background-color: $mobile-buy-button-background;
+                color: $mobile-buy-button-color;
+                border: 1px solid #6868685e;
+                width: 100%;
+                height: 40px;
+            }
+            .name{
+                font-size: 1.1rem;
+            }
+            .category{
+                font-size: 0.8rem;
+            }
+            .price{
+                font-size: 1.2rem;
+            }
+        }
+        
+    }
+}
