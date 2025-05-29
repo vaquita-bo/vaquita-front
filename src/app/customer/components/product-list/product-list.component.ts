@@ -21,7 +21,7 @@ export class ProductListComponent implements OnInit {
   constructor(private purchaseGroupService: PurchaseGroupService) {}
 
   ngOnInit() {
-    this.purchaseGroupService.getProducts().subscribe((data: PurchaseGroup[]) => {
+    this.purchaseGroupService.getAllGroups().subscribe((data: PurchaseGroup[]) => {
       this.purchaseGroupList = data;
       this.filteredPurchaseGroup = data;
     });

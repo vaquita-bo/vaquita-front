@@ -13,6 +13,7 @@ export interface PurchaseGroup {
 
     productId: number;
     productName: string;
+    productBrand: string;
     productImage: string;
     productPrice: number;
     productCategory: string;

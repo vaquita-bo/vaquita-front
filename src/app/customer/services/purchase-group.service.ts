@@ -10,11 +10,23 @@ export class PurchaseGroupService {
 
   constructor() { }
 
-  getProducts(): Observable<PurchaseGroup[]> {
+  getAllGroups(): Observable<PurchaseGroup[]> {
     return new Observable(observer => {
       observer.next(this.purchaseGroupsList);
       observer.complete();
     })
+  }
+
+  getGroup(id: number): Observable<PurchaseGroup> {
+    return new Observable(observer => {
+      const product = this.purchaseGroupsList.find(p => p.id === id);
+      if (product) {
+        observer.next(product);
+      } else {
+        observer.error('Product not found');
+      }
+      observer.complete();
+    });
   }
 
   purchaseGroupsList: PurchaseGroup[] = [
@@ -30,6 +42,7 @@ export class PurchaseGroupService {
       maxBuyers: 10,
       productId: 1,
       productName: 'Poleras',
+      productBrand: 'Nike',
       productImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfr4kFPHrL-0tvj_2fVtN9brjbngr_nNKOdw&s",
       productPrice: 29.99,
       productCategory: 'Ropa',
@@ -46,7 +59,8 @@ export class PurchaseGroupService {
       minBuyers: 5,
       maxBuyers: 10,
       productId: 2,
-      productName: 'Product B',
+      productName: 'Fideos',
+      productBrand: 'Don Victorio',
       productImage: 'https://amarket.com.bo/cdn/shop/files/900252.jpg?v=1712346166',
       productPrice: 19.99,
       productCategory: 'Category B',
