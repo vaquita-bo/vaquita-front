@@ -28,6 +28,16 @@ export const routes: Routes = [
 
   },
   {
+    path: 'lee',
+    loadComponent: () =>
+      import('./customer/components/product-list/product-list.component').then(m => m.ProductListComponent),
+  },
+  {
+    path: 'lee/:id',
+    loadComponent: () =>
+      import('./customer/components/purchase-group-detail/purchase-group-detail.component').then(m => m.PurchaseGroupDetailComponent),
+  },
+  {
     path: '**',
     redirectTo: 'productos'
   }  
